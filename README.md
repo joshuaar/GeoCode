@@ -1,7 +1,7 @@
 GeoCode
 =======
 
-command line access to google's GeoCoding service. Keeps within Google's daily limit and saves spot in address list.
+Command line access to google's GeoCoding service. Keeps within Google's daily limit and saves spot in address list.
 
 ##Usage
 GeoCode.py uses Google's geocoding API to turn search strings (addresses) into Lat/Long coordinates.
