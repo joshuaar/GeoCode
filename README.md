@@ -8,7 +8,8 @@ GeoCode.py uses Google's geocoding API to turn search strings (addresses) into L
 
 It has a command line interface:
 
-GeoCode.py -j JSDUMP -l LIMIT [-s SKIP] ghlist
+
+    GeoCode.py -j JSDUMP -l LIMIT [-s SKIP] ghlist
 
 - ghlist: list of addresses for geocoding, one address per line
 - JSDUMP: file to dump JSON results from google. One response per line.
