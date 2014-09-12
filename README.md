@@ -11,10 +11,10 @@ It has a command line interface:
 
     GeoCode.py -j JSDUMP -l LIMIT [-s SKIP] ghlist
 
-- ghlist: list of addresses for geocoding, one address per line
+- ghlist: list of addresses for geocoding, one address per line.
 - JSDUMP: file to dump JSON results from google. One response per line.
 - LIMIT: don't make more than LIMIT API calls.
-- SKIP: optional. Skip lines from the batch input in ghlist. for splitting API calls into multiple days
+- SKIP: optional. Skip lines from the batch input in ghlist. for splitting API calls into multiple days.
 
 ##Example
 
