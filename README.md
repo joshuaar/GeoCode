@@ -8,11 +8,13 @@ GeoCode.py uses Google's geocoding API to turn search strings (addresses) into L
 
 It has a command line interface:
 
-GeoCode.py -j JSDUMP -l LIMIT [-s SKIP] ghlist
-- ghlist: list of addresses for geocoding, one address per line
+
+    GeoCode.py -j JSDUMP -l LIMIT [-s SKIP] ghlist
+
+- ghlist: list of addresses for geocoding, one address per line.
 - JSDUMP: file to dump JSON results from google. One response per line.
 - LIMIT: don't make more than LIMIT API calls.
-- SKIP: optional. Skip lines from the batch input in ghlist. for splitting API calls into multiple days
+- SKIP: optional. Skip lines from the batch input in ghlist. for splitting API calls into multiple days.
 
 ##Example
 
@@ -20,15 +22,18 @@ Say you have a file called ghlist.txt with 100k addresses, one per line. The add
 
 run:
 
+
     python GeoCode.py -j results.jsonlist -l 2500 -s .skipfile ghlist.txt
 
 Your geocoded results will be written to results.jsonlist. The next day come back and run the command again until all addresses are geocoded.
 
 or use cron:
 
+
     sudo crontab -e
 
 and put this in the crontab:
+
 
     20 0 * * * python $MYGEOCODEPATH/GeoCode.py -j result.jsonlist ghcounts.txt -l 2500 -s $MYGEOCODEPATH/.skip.txt
 
