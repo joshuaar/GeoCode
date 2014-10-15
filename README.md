@@ -1,7 +1,7 @@
 GeoCode
 =======
 
-command line access to google's GeoCoding service. Keeps within Google's daily limit and saves spot in address list.
+Command line access to google's GeoCoding service. Keeps within Google's daily limit and saves spot in address list.
 
 ##Usage
 GeoCode.py uses Google's geocoding API to turn search strings (addresses) into Lat/Long coordinates.
@@ -35,7 +35,10 @@ or use cron:
 and put this in the crontab:
 
 
-    20 0 * * * python $MYGEOCODEPATH/GeoCode.py -j result.jsonlist ghcounts.txt -l 2500 -s $MYGEOCODEPATH/.skip.txt
+    20 0 * * * python $MYGEOCODEPATH/GeoCode.py -j $MYGEOCODEPATH/result.jsonlist $MYGEOCODEPATH/ghcounts.txt -l 2500 -s $MYGEOCODEPATH/.skip.txt
+
+of course, this assumes the results file and the ghcounts file (the list of things to be geocoded) are present in $MYGEOCODEPATH
 
 This will run the script daily at 12:20am.
+
 
